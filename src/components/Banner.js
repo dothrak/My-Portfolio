@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
@@ -9,42 +9,44 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = [ "Myriam", "White Team", "Blue Team" ];
+
   const period = 1000;
+
+  const toRotate = useMemo(() => ["Myriam", "White Team", "Blue Team"], []); 
+
+  const tick = useCallback(() => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === '') {
+      setIsDeleting(false);
+      setLoopNum((prevLoopNum) => prevLoopNum + 1);
+      setDelta(200);
+    }
+  }, [loopNum, isDeleting, text, setLoopNum, setIsDeleting, setText, setDelta, toRotate]);
+
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
 
-    return () => { clearInterval(ticker) };
-  }, [text])
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(200);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-    }
-  }
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [tick, delta]);
 
   const getLanguageFromURL = () => {
     const path = window.location.pathname;
@@ -104,7 +106,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">{welcome}</span>
-                <h1>{hi} <span className="txt-rotate" dataPeriod="400" data-rotate='[ "Myriam", "White Team", "Blue Team" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{hi} <span className="txt-rotate" data-rotate='[ "Myriam", "White Team", "Blue Team" ]'><span className="wrap">{text}</span></span></h1>
                   <p>{description}</p>
               </div>}
             </TrackVisibility>
