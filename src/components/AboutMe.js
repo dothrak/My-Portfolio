@@ -38,7 +38,7 @@ export const AboutMe = () => {
       url: "https://www.enseignementsup-recherche.gouv.fr/fr/classes-preparatoires-aux-grandes-ecoles-cpge-46496",
     },
     inge: {
-      title: "Ingeeniring Cycle",
+      title: "Ingineering Cycle",
       description: "Connected Objects and Cybersecurity major at ESILV Paris-La Défense",
       imgUrl: educImg3,
       url: "https://www.esilv.fr/en/programmes/master-degree-engineering/majors/it-iot-security/",
