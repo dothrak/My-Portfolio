@@ -100,22 +100,22 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">{welcome}</span>
-                <h1>{hi} <span className="txt-rotate" data-rotate='[ "Myriam", "White Team", "Blue Team" ]'><span className="wrap">{text}</span></span></h1>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">{welcome}</span>
+                  <h1>{hi} <span className="txt-rotate" data-rotate='[ "Myriam", "White Team", "Blue Team" ]'><span className="wrap">{text}</span></span></h1>
                   <p>{description}</p>
-              </div>}
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" className="img-fluid" />
                 </div>}
             </TrackVisibility>
           </Col>

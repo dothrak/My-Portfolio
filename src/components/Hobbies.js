@@ -53,7 +53,7 @@ export const HobbiesDisplay = () => {
             <div className="hoobies-bx">
             </div>
             <div className="motion-container horizontal-scroll">
-              <div className="flex justify-content-center" style={{ overflowX: 'auto' }}> {}
+              <div className="flex justify-content-center"> {}
                 {imagesRow1.map((image, index) => (
                   <HobbiesDataDisplay
                     key={index}
@@ -62,7 +62,7 @@ export const HobbiesDisplay = () => {
                   />
                 ))}
               </div>
-              <div className="flex justify-content-center mt-5" style={{ overflowX: 'auto' }}> {}
+              <div className="flex justify-content-center mt-5"> {}
                 {imagesRow2.map((image, index) => (
                   <HobbiesDataDisplay
                     key={index + imagesRow1.length}
@@ -78,4 +78,3 @@ export const HobbiesDisplay = () => {
     </section>
   );
 };
-

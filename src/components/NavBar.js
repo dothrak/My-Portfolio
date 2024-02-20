@@ -61,7 +61,7 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="md" className={` ${scrolled ? "scrolled" : "initial-black"}`}>
         <Container>
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" />

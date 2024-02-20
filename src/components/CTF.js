@@ -101,7 +101,7 @@ export const Ctf = () => {
                         <img src={hacking.image} alt={hacking.title}/>
                         <div>
                             <h3>
-                                <div className="ctf-link">
+                                <div className="ctf-link-chall">
                                     <a href={hacking.url} target="_blank" rel="noopener noreferrer">
                                       {hacking.title}
                                     </a>
@@ -114,10 +114,6 @@ export const Ctf = () => {
                     </div>
                 </div>
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <div className="col-12 text-center">
                     <div className="ctf-img justify-content-center">
                         {ctfs.map((ctfs) => (
@@ -125,7 +121,7 @@ export const Ctf = () => {
                             <img src={ctfs.image} alt={ctfs.title}/>
                             <div>
                                 <h3>
-                                    <div className="ctf-link">
+                                    <div className="ctf-link-ctf">
                                         <a href={ctfs.url} target="_blank" rel="noopener noreferrer"> 
                                           {ctfs.ranking}
                                         </a>

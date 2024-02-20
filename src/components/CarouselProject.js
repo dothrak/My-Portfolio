@@ -105,25 +105,6 @@ export const ProjectCarousel = () =>{
     },
   };
 
-  const titleDescriptionStyle = {
-    fontSize: 17,
-    color: "#bf636d",
-    fontStyle: 'italic'
-  };
-
-  const descriptionStyle = {
-    fontSize: 16,
-    color: "#ffa459"
-  };
-
-  const linkStyle = {
-    backgroundImage: 'linear-gradient(90.21deg, #ffa459 -5.91%, #9c3f78 111.58%)',
-    backgroundClip: 'text',
-    color: 'transparent',
-    textDecoration: 'none',
-    fontSize: 32,
-    fontWeight: 'bold'
-  };
 
   return (
   <Carousel 
@@ -135,15 +116,15 @@ export const ProjectCarousel = () =>{
   >
     {Object.values(currentProjects).map((project) => (
         <div key={project.id}>
-          <img src={project.image} alt={project.title} />
+          <img src={project.image} alt={project.title}/>
           <div>
             <h3>
-              <a href={project.url} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="a">
                 {project.title}
               </a>
             </h3>
-            <p style={titleDescriptionStyle} dangerouslySetInnerHTML={{ __html: project.titleDescription }}></p>
-            <p style={descriptionStyle} dangerouslySetInnerHTML={{ __html: project.description }}></p>
+            <h4 dangerouslySetInnerHTML={{ __html: project.titleDescription }} className="h4"></h4>
+            <p dangerouslySetInnerHTML={{ __html: project.description }} className="p"></p>
           </div>
         </div>
       ))}
