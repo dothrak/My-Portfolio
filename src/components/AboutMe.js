@@ -87,8 +87,8 @@ export const AboutMe = () => {
       url: "https://www.thalesdigital.io/en/",
     },
     rgs: {
-      title: "Certification : RGS - Cryptographie & Réseaux",
-      description: "Maîtrise des fondamentaux du RGS (Référentiel Général de Sécurité), de l'art de la cryptographie, et des différents protocoles clés du réseau (réalisés par Thales)",
+      title: "Certification : RGS, Cryptographie & Réseaux",
+      description: "Maîtrise des fondamentaux du RGS (Référentiel Général de Sécurité), de l'art de la cryptographie, et des différents protocoles clés du réseau (réalisée par Thales)",
       imgUrl: educImg5,
     },
     teamctf: {
@@ -124,7 +124,7 @@ export const AboutMe = () => {
       url: "https://www.thalesdigital.io/en/",
     },
     rgs: {
-      title: "Zertifizierung: RGS - Kryptografie & Netzwerk",
+      title: "Zertifizierung: RGS, Kryptografie & Netzwerk",
       description: "Beherrschung der Grundlagen des französischen RGS (Référentiel Général de Sécurité), der Kunst der Kryptographie und verschiedener wichtiger Netzprotokolle (von Thales)",
       imgUrl: educImg5,
     },
