@@ -98,7 +98,9 @@ export const Ctf = () => {
                 <div className="ctf-img justify-content-center">
                     {hacking.map((hacking) => (
                     <div key={hacking.id}>
+                      <div className='ctf-img-chall'>
                         <img src={hacking.image} alt={hacking.title}/>
+                      </div>
                         <div>
                             <h3>
                                 <div className="ctf-link-chall">
@@ -118,7 +120,9 @@ export const Ctf = () => {
                     <div className="ctf-img justify-content-center">
                         {ctfs.map((ctfs) => (
                         <div key={ctfs.id}>
+                          <div className='ctf-img-ctf'>
                             <img src={ctfs.image} alt={ctfs.title}/>
+                          </div>
                             <div>
                                 <h3>
                                     <div className="ctf-link-ctf">
