@@ -239,11 +239,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-left: 27%;
     margin-bottom: 10px;
   }
-  .language-icon{
+  .language-icon {
     max-width: 30px;
     width: 100%;
     height: auto;
     margin-left: 260%;
+    margin-right: 20px;
+    padding-bottom: 10px;
+  }
+  .language-link  {
+    max-width: 30px;
+    width: 100%;
+    height: auto;
+    margin-left: 30%;
     margin-right: 20px;
     padding-bottom: 10px;
   }
