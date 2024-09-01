@@ -83,7 +83,7 @@ export const NavBar = () => {
               </div>
             </span>
             <div className="navbar-text">
-              <DownloadCVButton />
+              <DownloadCVButton language={currentLanguage}/>
             </div>
             <div className="d-flex align-items-center">
               <div className="d-flex flex-row">

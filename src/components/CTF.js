@@ -5,6 +5,10 @@ import hackImg3 from "../assets/img/hack-img3.png";
 import hackImg4 from "../assets/img/hack-img4.png";
 import ctfImg1 from "../assets/img/ctf-img1.png";
 import ctfImg2 from "../assets/img/ctf-img2.png";
+import ctfImg3 from "../assets/img/ctf-img3.png";
+import ctfImg4 from "../assets/img/ctf-img4.png";
+import ctfImg5 from "../assets/img/ctf-img5.png";
+import ctfImg6 from "../assets/img/ctf-img6.png";
 
 export const Ctf = () => {
   const getLanguageFromURL = () => {
@@ -55,17 +59,45 @@ export const Ctf = () => {
   const ctfs = [
     {
         id: 1,
-        title: "TRACS",
+        title: "TRACS 2023",
         ranking: "25/82",
         image: ctfImg1,
         url : "https://tracs.viarezo.fr/",
     },
     {
-      id: 1,
-      title: "HackDay Qualificaitons",
+      id: 2,
+      title: "HACKDAY Finale 2023",
       ranking: "19/70",
       image: ctfImg2,
       url : "https://hackday.fr/",
+  },
+  {
+    id: 3,
+    title: "European Cyber Cup 2024",
+    ranking: "16/20",
+    image: ctfImg3,
+    url : "https://european-cybercup.com/",
+  },
+  {
+    id: 4,
+    title: "HackSecuReims 2024",
+    ranking: "23/60",
+    image: ctfImg4,
+    url : "https://www.hacksecureims.eu/",
+  },
+  {
+  id: 5,
+  title: "WOCS'HACK 2024",
+  ranking: "5/14",
+  image: ctfImg5,
+  url : "https://wocshack.org/",
+  },
+  {
+  id: 6,
+  title: "FCSC 2024 ",
+  ranking: "TOP 100 / 1000",
+  image: ctfImg6,
+  url : "https://cyber.gouv.fr/france-cybersecurity-challenge-2024",
   },
   ];
 
@@ -116,6 +148,8 @@ export const Ctf = () => {
                     </div>
                 </div>
                 <br></br>
+                <br></br>
+                <br></br>
                 <div className="col-12 text-center">
                     <div className="ctf-img justify-content-center">
                         {ctfs.map((ctfs) => (
@@ -127,8 +161,12 @@ export const Ctf = () => {
                                 <h3>
                                     <div className="ctf-link-ctf">
                                         <a href={ctfs.url} target="_blank" rel="noopener noreferrer"> 
-                                          {ctfs.ranking}
+                                          {ctfs.title}
                                         </a>
+                                        <br></br>
+                                        <span> 
+                                          {ctfs.ranking}
+                                        </span>
                                     </div>
                                 </h3>
                             </div>

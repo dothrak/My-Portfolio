@@ -815,8 +815,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-wrap: wrap; 
 }
 .ctf-img img {
-  width: 225px;
-  height: 225px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   margin: 0 70px 30px 0;
 }
@@ -833,20 +833,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 10px 0 0px 0;
 }
 .ctf-link-chall a{
-  color: #b97543;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 70px 30px 0;  
 }
 .ctf-link-chall a:hover {
-  color: white;
+  color: #b97543;
 }
 .ctf-link-ctf a{
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 70px 30px 0;
+}
+.ctf-link-ctf span{
   color: #b97543;
   text-decoration: none;
   margin: 0 70px 30px 0;
 }
 .ctf-link-ctf a:hover {
-  color: white;
+  color: #b97543;
 }
 @media (max-width: 420px) {
   .ctf {
@@ -867,8 +872,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 0px auto;
     padding-left: 0px;
     margin-bottom: 10px;
-    width: 100px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .ctf-img-ctf img {
     margin: 0px auto;
@@ -876,16 +881,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 10px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .ctf-link-chall a{
-    color: #b97543;
+    color: #ffffff;
     text-decoration: none;
     margin: 0px 10px;
     font-size: 14px;
   }
   .ctf-link-ctf a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 0px;
+    margin: 0px auto;
+    font-size: 14px;
+  }
+  .ctf-link-ctf span{
     color: #b97543;
     text-decoration: none;
     padding-left: 0px;
@@ -901,21 +913,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 17px;
   }
   .ctf-img-chall img {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
   }
   .ctf-img-ctf img {
     margin: 0px auto;
     margin-left: 15px;
     margin-right: 40px;
     margin-bottom: 10px;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
   }
   .ctf-link-chall a{
     font-size: 17px;
   }
   .ctf-link-ctf a{
+    margin: 0px auto;
+    margin-left: 15px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+  .ctf-link-ctf span{
     margin: 0px auto;
     margin-left: 15px;
     margin-right: 40px;
